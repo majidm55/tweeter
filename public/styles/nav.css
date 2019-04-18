@@ -1,6 +1,7 @@
 #nav-bar {
   background-color: #28c99e;
   position: fixed;
+  top:0;
   height: 80px;
   width: 100%;
   color: #e8fdff;
@@ -20,4 +21,8 @@
   position: relative;
   top: 20px;
   padding-left: 10px;
+}
+
+#nav-bar button {
+  /*float: right;*/
 }

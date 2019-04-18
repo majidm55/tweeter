@@ -52,6 +52,16 @@ $(document).ready(function() {
 // ];
 
 loadTweets();
+//toggle compose button//
+$("#nav-bar button").on('click',(function(){
+
+  $(".new-tweet").slideToggle("slow");
+$(".new-tweet textarea").focus();
+
+}));
+
+//autofocus textarea
+
 function renderTweets(tweets) {
   var tweetContainer = $('.tweet-container')
   tweetContainer.empty();
@@ -134,4 +144,6 @@ function loadTweets() {
 loadTweets();
 
 
+
 });
+
