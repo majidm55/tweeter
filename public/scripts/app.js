@@ -55,7 +55,7 @@ const data = [
 function renderTweets(tweets) {
   for(tweet of tweets) {
     let $tweet = createTweetElement(tweet);
-    $('.tweet-container').append($tweet);
+    $('.tweet-container').prepend($tweet);
 
   }
 }
@@ -111,10 +111,10 @@ function postingData() {
     let tweetLength = $('.new-tweet textarea').val().length
 
     if (tweetLength > 140) {
-      alert("Exceeded character limit")
+      return alert("Exceeded character limit")
     }
     if (!tweetLength){
-      alert("Invalid input")
+      return alert("Invalid input")
     }
 
     $.post( "/tweets", $form.serialize(), loadTweets );
