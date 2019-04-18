@@ -56,7 +56,7 @@ function renderTweets(tweets) {
   for(tweet of tweets) {
     let $tweet = createTweetElement(tweet);
     $('.tweet-container').append($tweet);
-    console.log(tweet);
+
   }
 }
 
@@ -100,20 +100,36 @@ function createTweetElement(tweetData) {
   return $tweet;
 }
 
+
+
 function postingData() {
   $form = $('.new-tweet form');
-  console.log($form); ///have to add url //
   $form.submit(function (event) {
     event.preventDefault();
     console.log('Button clicked, performing ajax call...');
-    $.post( "/tweets", $form.serialize() );
+
+    let tweetLength = $('.new-tweet textarea').val().length
+
+    if (tweetLength > 140) {
+      alert("Exceeded character limit")
+    }
+    if (!tweetLength){
+      alert("Invalid input")
+    }
+
+    $.post( "/tweets", $form.serialize(), loadTweets );
     console.log("newtweet!!!",$form)
   });
 
 };
 postingData();
 
+function loadTweets() {
+  $.get( "/tweets", function( data ) {
+    renderTweets(data);
+  });
+};
+loadTweets();
 
-renderTweets(data);
 
 });
