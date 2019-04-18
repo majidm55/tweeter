@@ -4,22 +4,145 @@
  * Do not modify these two selectors, please
  */
 html {
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
   box-sizing: border-box;
 }
 *, *:before, *:after {
   box-sizing: inherit;
+
 }
 
 /*
  * Global layout stuff
  */
 
+
 body {
   margin: 0;
   color: #244751;
   background-color: #eee;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
+.container {
+  width: 50%;
+  margin: 0 auto;
+  background-color: white;
+  position: relative;
+  top: 80px;
+  height: 100vh;
+
+}
+
+p,h2 {
+  display: inline-block;
+  /*padding: 5px;*/
+}
+
+.new-tweet {
+  margin: 0 auto;
+  padding: 5px;
+  background-color: gainsboro;
+  border-radius: 10px;
+  width: 80%;
+  position: relative;
+  top: 15%;
+}
+
+.new-tweet h2 {
+  padding-left: 10px;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.new-tweet .line {
+    width: 95%;
+    margin: 0 auto;
+    border: 1.2px solid black;
+    color: black;
+    position: relative;
+    top: -20px;
+}
+
+.new-tweet form {
+  padding: 7px;
+}
+
+.new-tweet textarea {
+  width: 100%;
+  height: 100%;
+  padding: 5px 0 10px 5px;
+}
+
+.new-tweet span {
+  float: right;
+}
+
+.tweet-container {
+  margin-top: 30%;
+}
+.tweet{
+    background-color: lightgrey;
+    height: 30%;
+    width: 85%;
+    position: relative;
+    top: 20%;
+    padding-top:20px;
+    margin: 0 auto;
+    border-radius: 20px;
+    opacity: .5;
+}
+
+.tweet:hover {
+  opacity: 1;
+}
+.tweet:hover .icons {
+  display: block;
+}
+
+.tweet header {
+  background-color: gainsboro;
+}
+
+article img {
+  width: 20%;
+  border-radius: 50px;
+  float: left;
+}
+
+.tweet h3 {
+  display: inline-block;
+}
+
+.tweet h6 {
+  float: right;
+}
+
+article content {
+  background-color: white;
+  display: block;
+  width: 95%;
+  margin: 0 auto;
+}
+
+article content p {
+  padding: 5px;
+}
+
+.tweet footer {
+    position: relative;
+    top: 20%;
+    padding: 10px;
+}
+
+.tweet .icons {
+  float: right;
+  position: relative;
+  top: 10px;
+  display: none;
+}
+
+footer .icons i {
+  padding: 5px;
+}
