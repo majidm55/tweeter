@@ -79,6 +79,10 @@ p,h2 {
   float: right;
 }
 
+.new-tweet p {
+color: red;
+}
+
 .tweet-container {
   margin-top: 30%;
 }
