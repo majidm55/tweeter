@@ -13,6 +13,8 @@ $("#nav-bar button").on('click',(function(){
   $(".new-tweet textarea").focus();
 }));
 
+// CALL BACK FUNCTION FOR GETTING "TIME SINCE"
+
 function timeSince(date) {
  var seconds = Math.floor((new Date() - date) / 1000);
  var interval = Math.floor(seconds / 31536000);
@@ -38,7 +40,7 @@ function timeSince(date) {
  return Math.floor(seconds + 1) + " seconds ago";
 }
 
-
+// FUNCTION TO MAKE TWEETS APPEAR ON PAGE
 function renderTweets(tweets) {
   var tweetContainer = $('.tweet-container')
   tweetContainer.empty();
@@ -48,6 +50,7 @@ function renderTweets(tweets) {
   }
 }
 
+// FUNCTION TO STRUCTURE AND CREATE TWEETS
 function createTweetElement(tweetData) {
   // access userdata from our database object
   let {user, content ,created_at} = tweetData;
@@ -89,7 +92,7 @@ function createTweetElement(tweetData) {
 }
 
 
-
+//DOING ASYNCHRONOUS POST REQUESTS
 function postingData() {
   $form = $('.new-tweet form');
   $form.submit(function (event) {
@@ -115,6 +118,7 @@ function postingData() {
 };
 postingData();
 
+// FUNCTION TO LOAD TWEETS ON THE PAGE WITH GET REQUEST
 function loadTweets() {
   $.get( "/tweets", function( data ) {
     renderTweets(data);
@@ -125,5 +129,7 @@ loadTweets();
 
 
 });
+
+// END OF CODE
 
 

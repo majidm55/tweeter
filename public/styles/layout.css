@@ -25,6 +25,7 @@ body {
   font-family: "Roboto Condensed", sans-serif;
 }
 
+/*//main conatiner styles*/
 .container {
   width: 50%;
   margin: 6% auto;
@@ -33,11 +34,7 @@ body {
   top: 0;
 }
 
-/*p,h2 {
-  display: inline-block;
-  padding: 5px
-}*/
-
+/*//compose tweet styles start*/
 
 .new-tweet {
   margin: 10% auto;
@@ -83,6 +80,12 @@ body {
 color: red;
 display: inline;
 }
+
+/*Compose tweet styles end here*/
+
+
+
+/*//New Tweet styles start here*/
 
 .tweet-container {
   margin-top: 10%;
@@ -142,6 +145,10 @@ article content p {
   word-break: break-all;
 }
 
+/*//New Tweet Styles end here///*/
+
+/*Footer style starts here*/
+
 .tweet footer {
   border-top: 1px solid lightgrey;
   margin: 0 10px;
@@ -157,3 +164,7 @@ article content p {
 footer .icons i {
   padding: 5px;
 }
+
+/*Footer styles end here*/
+
+/*All Styles end here*/
