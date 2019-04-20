@@ -1,5 +1,5 @@
 #nav-bar {
-  background-color: #28c99e;
+  background-color: #24917d;
   position: fixed;
   top:0;
   height: 80px;
@@ -19,7 +19,25 @@
 #nav-bar .header {
   float : left;
   position: relative;
-  top: 20px;
+  top: 30px;
   padding-left: 10px;
+  /*font-weight: bold;*/
 }
 
+#nav-bar button {
+  float: right;
+  position: relative;
+  left: -10%;
+  color: #00a087;
+  margin: 5px;
+  padding: 8px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+#nav-bar button:hover {
+  opacity: .5;
+}
+#nav-bar i {
+  padding: 10px;
+}

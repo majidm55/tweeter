@@ -9,11 +9,34 @@ $(document).ready(function() {
 loadTweets();
 //toggle compose button//
 $("#nav-bar button").on('click',(function(){
-
   $(".new-tweet").slideToggle("slow");
-$(".new-tweet textarea").focus();
-
+  $(".new-tweet textarea").focus();
 }));
+
+function timeSince(date) {
+ var seconds = Math.floor((new Date() - date) / 1000);
+ var interval = Math.floor(seconds / 31536000);
+ if (interval >= 1) {
+     return interval + " years ago";
+ }
+ interval = Math.floor(seconds / 2592000);
+ if (interval >= 1) {
+     return interval + " months ago";
+ }
+ interval = Math.floor(seconds / 86400);
+ if (interval >= 1) {
+     return interval + " days ago";
+ }
+ interval = Math.floor(seconds / 3600);
+ if (interval >= 1) {
+     return interval + " hours ago";
+ }
+ interval = Math.floor(seconds / 60);
+ if (interval >= 1) {
+     return interval + " minutes ago";
+ }
+ return Math.floor(seconds + 1) + " seconds ago";
+}
 
 
 function renderTweets(tweets) {
@@ -22,7 +45,6 @@ function renderTweets(tweets) {
   for(tweet of tweets) {
     let $tweet = createTweetElement(tweet);
     tweetContainer.prepend($tweet);
-
   }
 }
 
@@ -42,7 +64,7 @@ function createTweetElement(tweetData) {
   $content = $("<content>")
   $p1 = $("<p>").text(text);
   $footer = $("<footer>");
-  $p2 = $("<p>").text(created_at);
+  $p2 = $("<p>").text(timeSince(created_at));
   $icons = $("<div>").addClass("icons");
   $iconFlag = $(`<i class="fas fa-flag"></i>`);
   $iconTweet = $(`<i class="fas fa-retweet"></i>`);

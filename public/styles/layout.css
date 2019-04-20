@@ -27,27 +27,25 @@ body {
 
 .container {
   width: 50%;
-  margin: 0 auto;
+  margin: 6% auto;
   background-color: white;
   position: relative;
-  top: 80px;
-  height: 100vh;
-
+  top: 0;
 }
 
-p,h2 {
+/*p,h2 {
   display: inline-block;
-  /*padding: 5px;*/
-}
+  padding: 5px
+}*/
+
 
 .new-tweet {
-  margin: 0 auto;
-  padding: 5px;
+  margin: 10% auto;
   background-color: gainsboro;
   border-radius: 10px;
   width: 80%;
   position: relative;
-  top: 15%;
+  top: 40px;
 }
 
 .new-tweet h2 {
@@ -57,12 +55,12 @@ p,h2 {
 }
 
 .new-tweet .line {
-    width: 95%;
-    margin: 0 auto;
-    border: 1.2px solid black;
-    color: black;
-    position: relative;
-    top: -20px;
+  width: 95%;
+  margin: 0 auto;
+  border: 1.2px solid black;
+  color: black;
+  position: relative;
+  top: -20px;
 }
 
 .new-tweet form {
@@ -77,25 +75,26 @@ p,h2 {
 
 .new-tweet span {
   float: right;
+  display: inline;
+  margin-top: 5px;
 }
 
 .new-tweet p {
 color: red;
+display: inline;
 }
 
 .tweet-container {
-  margin-top: 30%;
+  margin-top: 10%;
 }
+
 .tweet{
-    background-color: lightgrey;
-    height: 30%;
-    width: 85%;
-    position: relative;
-    top: 20%;
-    padding-top:20px;
-    margin: 0 auto;
+    width: 80%;
+    margin: 20px auto;
     border-radius: 20px;
     opacity: .5;
+    border: 1px solid grey;
+    background-color: white;
 }
 
 .tweet:hover {
@@ -107,20 +106,26 @@ color: red;
 
 .tweet header {
   background-color: gainsboro;
+  border-radius: 20px;
 }
 
 article img {
-  width: 20%;
+  width: 15%;
   border-radius: 50px;
   float: left;
 }
 
 .tweet h3 {
   display: inline-block;
+  font-size: 1.5em;
+  margin-left: 10px;
 }
 
 .tweet h6 {
   float: right;
+  position: relative;
+  left: -5%;
+  font-size: .8em;
 }
 
 article content {
@@ -128,22 +133,24 @@ article content {
   display: block;
   width: 95%;
   margin: 0 auto;
+  padding: 10px;
 }
 
 article content p {
   padding: 5px;
+  text-align: left;
+  word-break: break-all;
 }
 
 .tweet footer {
-    position: relative;
-    top: 20%;
-    padding: 10px;
+  border-top: 1px solid lightgrey;
+  margin: 0 10px;
 }
 
 .tweet .icons {
   float: right;
   position: relative;
-  top: 10px;
+  top: -38px;
   display: none;
 }
 
