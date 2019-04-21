@@ -1,6 +1,6 @@
 # Tweeter Project
 
-Tweeter is a single-page Twitter clone.  All the front-end code was written by me. The base back-end code(server/routes) was provided by LHL, and some modifications were made to link it to monogdb. 
+Tweeter is a single-page Twitter clone.  All the front-end code was written by me. The base back-end code(server/routes) was provided by LHL, and some modifications were made to link it to mongodb. 
 
 This project uses port 8080 (<http://localhost:8080/> in your browser.).
 
